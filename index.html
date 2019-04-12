@@ -455,7 +455,10 @@ function w3_close() {
       responsive: true
     });
     $('#力').DataTable({
-        responsive: true
+        responsive: true,
+        initComplete: function () {
+        $('.dataTables_filter input[type="search"]').css({ 'width': '50px', 'display': 'inline-block' });
+        }
     });
     $('#技').DataTable({
         responsive: true
