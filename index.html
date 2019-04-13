@@ -114,7 +114,7 @@ html,body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
               <td>Blue</td>
 
               <!-- PR -->   <td>114.05</td>
-              
+
               <!-- HP -->   <td>5830</td>
               <!-- SP -->   <td>0</td>
               <!-- ATK -->  <td>651</td>
@@ -344,7 +344,7 @@ html,body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
               <!-- Color        <td>Blue</td> -->
 
               <!-- PR -->   <td>114.05</td>
-              
+
               <!-- HP -->   <td>5830</td>
               <!-- SP -->   <td>0</td>
               <!-- ATK -->  <td>651</td>
@@ -541,7 +541,10 @@ function w3_close() {
         }
     });
     $('#技').DataTable({
-        responsive: true
+        responsive: true,
+        initComplete: function () {
+        $('.dataTables_filter input[type="search"]').css({ 'width': '50px', 'display': 'inline-block' });
+        }
     });
     $('#速').DataTable({
         responsive: true
